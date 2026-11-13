@@ -587,3 +587,13 @@ p { margin: 0 0 1rem; }
   .service-band { padding: 2.4rem 0; }
   .about, .photos, .visit { padding-block: 3.75rem; }
 }
+
+.footer-credit {
+  margin: 2rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: #8a8a8a;
+}
