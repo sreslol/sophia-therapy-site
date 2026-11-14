@@ -255,13 +255,52 @@ h1,h2,h3,h4{margin:0;font-weight:400}
 @media (max-width:640px){.social-card{padding:20px}.sc-cta{display:none}}
 
 
-/* live facebook events */
-.fb-events{display:grid;grid-template-columns:1fr minmax(0,500px);gap:48px;align-items:center;margin:64px 0 48px;padding:40px;border:1px solid rgba(184,137,63,.3);background:rgba(10,8,6,.45)}
-.fb-events h3{font:400 clamp(30px,3.4vw,44px)/1 var(--display);letter-spacing:.02em;margin:0 0 14px}
-.fb-events-copy p{color:var(--muted);margin:0 0 24px}
-.fb-events-frame{max-width:500px;width:100%;min-width:0;justify-self:end;overflow:hidden}
-.fb-events-frame .fb-page,.fb-events-frame .fb-page span,.fb-events-frame .fb-page iframe{max-width:100%!important}
-@media (max-width:860px){.fb-events{grid-template-columns:minmax(0,1fr);padding:20px;gap:28px}.fb-events-frame{justify-self:center}}
+/* recent events: native placeholder cards (replaces the Facebook Page Plugin) */
+.recent-events{max-width:900px;margin:64px auto 0}
+.recent-events-head{text-align:center;margin:0 0 36px}
+.recent-events-head h3{font:600 clamp(30px,3.6vw,44px)/1.05 var(--display);letter-spacing:.05em;text-transform:uppercase;color:var(--cream);margin:0}
+.recent-events-head h3::after{content:"";display:block;width:180px;height:12px;margin:18px auto 0;background:url(images/rule-diamond.svg) center/contain no-repeat}
+.recent-events-head p{color:var(--muted);margin:16px 0 24px;font-size:17px}
+.recent-events-head .btn{white-space:normal;text-align:center;max-width:100%}
+.event-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.event-card{display:flex;flex-direction:column;min-width:0;text-decoration:none;color:inherit;background:rgba(18,15,12,.7);border:1px solid rgba(184,137,63,.3);border-radius:var(--radius);overflow:hidden;transition:border-color .2s,transform .2s}
+.event-card:hover{border-color:var(--brass);transform:translateY(-3px)}
+.ec-media{position:relative;aspect-ratio:16/9;overflow:hidden;background:
+  url(images/grain.svg),
+  radial-gradient(ellipse at 50% 42%,rgba(184,137,63,.26),transparent 64%),
+  linear-gradient(160deg,#2c2218,#120e0b)}
+.ec-media::before{content:"";position:absolute;inset:14%;border:1px solid rgba(216,180,110,.28);box-shadow:inset 0 0 0 6px rgba(15,12,10,.12)}
+.ec-media::after{content:"";position:absolute;left:50%;top:50%;width:44px;height:44px;transform:translate(-50%,-50%);opacity:.8;background:center/contain no-repeat url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'><rect x='9' y='11' width='30' height='28' rx='2' stroke='%23d8b46e' stroke-width='1.6'/><path d='M9 19h30M17 8v6M31 8v6' stroke='%23d8b46e' stroke-width='1.6' stroke-linecap='round'/><circle cx='18' cy='27' r='1.5' fill='%23d8b46e'/><circle cx='24' cy='27' r='1.5' fill='%23d8b46e'/><circle cx='30' cy='27' r='1.5' fill='%23d8b46e'/><circle cx='18' cy='33' r='1.5' fill='%23d8b46e'/><circle cx='24' cy='33' r='1.5' fill='%23d8b46e'/></svg>")}
+.event-card:nth-child(2) .ec-media{background:
+  url(images/grain.svg),
+  radial-gradient(ellipse at 30% 60%,rgba(184,137,63,.22),transparent 62%),
+  linear-gradient(200deg,#261c16,#120e0b)}
+.event-card:nth-child(3) .ec-media{background:
+  url(images/grain.svg),
+  radial-gradient(ellipse at 70% 30%,rgba(140,59,38,.22),transparent 60%),
+  linear-gradient(140deg,#2a1e16,#110d0a)}
+.event-card:nth-child(4) .ec-media{background:
+  url(images/grain.svg),
+  radial-gradient(ellipse at 40% 30%,rgba(216,180,110,.16),transparent 58%),
+  linear-gradient(180deg,#2a221a,#130e0b)}
+.event-card:nth-child(5) .ec-media{background:
+  url(images/grain.svg),
+  radial-gradient(ellipse at 65% 70%,rgba(184,137,63,.24),transparent 64%),
+  linear-gradient(220deg,#231a14,#100c09)}
+.event-card:nth-child(6) .ec-media{background:
+  url(images/grain.svg),
+  radial-gradient(ellipse at 50% 80%,rgba(140,59,38,.18),transparent 60%),
+  linear-gradient(110deg,#2b2018,#120e0b)}
+.ec-body{padding:16px 16px 20px;display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-width:0}
+.event-card .ph-badge{margin-bottom:4px}
+.ec-date{margin:0;font:600 12px/1 var(--cond);letter-spacing:.2em;text-transform:uppercase;color:var(--brass)}
+.event-card h4{margin:0;font:600 20px/1.2 var(--display);letter-spacing:.04em;text-transform:uppercase;color:var(--cream);overflow-wrap:anywhere}
+.ec-line{margin:0;font-size:14px;color:var(--muted);font-style:italic}
+@media (max-width:980px){.event-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){
+  .event-cards{grid-template-columns:minmax(0,1fr);max-width:400px;margin:0 auto}
+  .recent-events-head .btn{padding:16px 18px;letter-spacing:.1em}
+}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
