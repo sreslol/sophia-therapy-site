@@ -56,8 +56,7 @@ h1,h2,h3,h4{margin:0;font-weight:400}
 .hero h1{font:400 clamp(64px,11vw,156px)/.86 var(--display);letter-spacing:.02em;color:var(--cream);text-shadow:0 4px 40px rgba(0,0,0,.5)}
 .h1-small{display:block;font:italic 500 clamp(24px,3vw,36px)/1 var(--script);color:var(--brass);letter-spacing:0;margin-bottom:6px}
 .h1-script{display:block;font:italic 700 clamp(40px,6vw,78px)/1.1 var(--script);color:var(--brass-2);letter-spacing:0;margin-top:2px}
-.tagline{font:italic 500 clamp(18px,2vw,22px)/1.4 var(--script);color:var(--paper);opacity:.85;margin:22px auto 26px;max-width:640px}
-.hero-pills{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:0;margin:0 0 36px}
+.hero-pills{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:0;margin:26px 0 36px}
 .hero-pills li{font:600 13px/1 var(--cond);letter-spacing:.18em;text-transform:uppercase;color:var(--cream);border:1px solid rgba(244,234,216,.28);padding:10px 16px;border-radius:999px}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
 .btn{display:inline-flex;white-space:nowrap;align-items:center;gap:10px;font:700 16px/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:18px 28px;border-radius:999px;transition:transform .2s,background .2s,color .2s}
@@ -342,7 +341,6 @@ body{background:var(--ink) url(images/grain.svg)}
 .flourish.flip{transform:scaleX(-1)}
 .hero h1{font-size:clamp(44px,7.2vw,98px);line-height:.95;text-shadow:none;color:var(--cream)}
 .h1-sub{display:block;font:600 clamp(13px,1.5vw,17px)/1 var(--cond);letter-spacing:.5em;color:var(--brass-2);margin-top:16px;padding-left:.5em}
-.tagline{color:var(--paper)}
 .hero-pills li{border-radius:3px;border-color:rgba(184,137,63,.45)}
 .btn-primary{box-shadow:none;background:var(--brass);color:#120d09}
 .btn-primary:hover{background:var(--brass-2)}
