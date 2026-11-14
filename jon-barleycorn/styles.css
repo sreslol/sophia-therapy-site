@@ -254,6 +254,15 @@ h1,h2,h3,h4{margin:0;font-weight:400}
 @media (max-width:860px){.social-inner{grid-template-columns:1fr;gap:40px}}
 @media (max-width:640px){.social-card{padding:20px}.sc-cta{display:none}}
 
+
+/* live facebook events */
+.fb-events{display:grid;grid-template-columns:1fr minmax(0,500px);gap:48px;align-items:center;margin:64px 0 48px;padding:40px;border:1px solid rgba(184,137,63,.3);background:rgba(10,8,6,.45)}
+.fb-events h3{font:400 clamp(30px,3.4vw,44px)/1 var(--display);letter-spacing:.02em;margin:0 0 14px}
+.fb-events-copy p{color:var(--muted);margin:0 0 24px}
+.fb-events-frame{background:#fff;max-width:500px;width:100%;justify-self:end}
+.fb-events-frame iframe{display:block;width:100%;max-width:500px}
+@media (max-width:860px){.fb-events{grid-template-columns:1fr;padding:24px;gap:28px}.fb-events-frame{justify-self:center}}
+
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 /* ===== Rebrand layer: Jon Barleycorn Tavern & Lounge (rustic signage look) ===== */
