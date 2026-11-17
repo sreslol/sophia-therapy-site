@@ -1,6 +1,6 @@
 /* The Phoenix Barber Lounge: draft mockup
    Palette from the shop's logo: deep black, chrome-gold lettering,
-   and the phoenix's red, white and blue. Blackletter used only as an accent. */
+   and the phoenix's red, white and blue. Blackletter only in the logo wordmark (header, footer). */
 
 @font-face { font-family: "Oswald"; src: url("fonts/oswald-latin-variable.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
 @font-face { font-family: "Barlow"; src: url("fonts/barlow-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
@@ -95,10 +95,11 @@ address { font-style: normal; }
 .header-inner { display: flex; align-items: center; gap: 1rem; min-height: 4rem; }
 .brand { display: flex; align-items: center; gap: 0.55rem; text-decoration: none; color: var(--white); margin-right: auto; }
 .brand-bird { width: auto; height: 2.6rem; filter: drop-shadow(0 0 10px rgba(211, 36, 44, 0.25)); }
-.brand-text { display: grid; grid-template-columns: auto auto; column-gap: 0.3rem; align-items: baseline; line-height: 1; }
+.brand-text { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; }
+.brand-word { display: flex; align-items: baseline; gap: 0.22em; white-space: nowrap; }
 .brand-the, .brand-name { font-family: var(--black-letter); font-weight: 700; font-size: 1.45rem; background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .brand-the { font-size: 1.05rem; }
-.brand-sub { grid-column: 1 / -1; font: 500 0.62rem/1 var(--display); letter-spacing: 0.42em; text-transform: uppercase; color: var(--white); margin-top: 0.25rem; }
+.brand-sub { font: 500 0.62rem/1 var(--display); letter-spacing: 0.42em; text-transform: uppercase; color: var(--white); margin-top: 0.25rem; }
 .nav { display: none; gap: 1.6rem; }
 .nav a { font: 500 0.88rem/1 var(--display); letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; color: var(--muted); }
 .nav a:hover { color: var(--gold-hi); }
@@ -112,7 +113,8 @@ address { font-style: normal; }
   linear-gradient(180deg, rgba(6,6,6,0.55) 0%, rgba(6,6,6,0.2) 30%, rgba(6,6,6,0.92) 78%, var(--black) 100%); }
 .hero-inner { padding: 3rem 0 2.75rem; text-align: center; display: flex; flex-direction: column; align-items: center; }
 .hero-logo { width: min(86vw, 30rem); mix-blend-mode: screen; margin-bottom: 0.25rem; }
-.hero-motto { margin: 0 0 0.35rem; font: 700 clamp(1.7rem, 6vw, 2.4rem)/1.1 var(--black-letter); background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero-motto { display: flex; align-items: center; gap: 0.9rem; margin: 0.4rem 0 0.6rem; font: 500 0.95rem/1 var(--display); letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold-hi); padding-left: 0.42em; }
+.hero-motto::before, .hero-motto::after { content: ""; width: 2rem; height: 1px; background: rgba(217,180,90,0.6); }
 .hero-tagline { max-width: 34rem; color: #e4ded4; font-size: 1.1rem; margin-bottom: 1.6rem; }
 .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; width: 100%; }
 .hero-actions .btn { flex: 1 1 14rem; max-width: 18rem; }
@@ -139,7 +141,7 @@ address { font-style: normal; }
 .menu-price { font: 600 1.15rem/1 var(--display); color: var(--gold-hi); }
 .menu p { margin: 0.3rem 0 0; color: var(--muted); font-size: 0.95rem; line-height: 1.45; }
 .menu-feature { background: linear-gradient(160deg, #19140a 0%, var(--ink-2) 55%); border-color: rgba(217,180,90,0.35); }
-.menu-royal .menu-name { font-family: var(--black-letter); font-weight: 700; text-transform: none; font-size: 1.35rem; letter-spacing: 0; background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.menu-royal .menu-name { color: var(--gold-hi); font-weight: 600; }
 .menu-book { margin-top: 1.4rem; width: 100%; }
 
 /* About */
@@ -148,7 +150,7 @@ address { font-style: normal; }
 .about-photo { margin: 0; position: relative; }
 .about-photo img { border-radius: 18px; aspect-ratio: 4 / 3; width: 100%; object-fit: cover; object-position: 40% 50%; }
 .about-photo::after { content: ""; position: absolute; inset: auto -0.6rem -0.6rem auto; width: 40%; height: 40%; border-right: 3px solid var(--gold); border-bottom: 3px solid var(--gold); border-radius: 0 0 18px 0; pointer-events: none; }
-.about-copy h2 .blackletter { background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 1.1em; }
+.about-copy h2 .accent { color: var(--gold); }
 .about-copy p { color: #ddd6ca; }
 .about-points { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 0.6rem; }
 .about-points li { padding-left: 1.6rem; position: relative; }
