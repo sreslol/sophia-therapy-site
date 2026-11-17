@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Chris's General Repairs mark">
+  <rect width="64" height="64" rx="10" fill="#1b2a41"/>
+  <path fill="#f6f1e8" d="M46.4 21.6c-2.4-3-6.2-4.8-10.8-4.8-9.2 0-15.5 6.4-15.5 15.2s6.3 15.2 15.5 15.2c4.6 0 8.4-1.8 10.8-4.8l-5.6-4.1c-1.2 1.5-3 2.4-5.2 2.4-4.4 0-7.3-3.2-7.3-8.7s2.9-8.7 7.3-8.7c2.2 0 4 .9 5.2 2.4l5.6-4.1z"/>
+  <rect x="14" y="54" width="36" height="4" rx="1.5" fill="#d97706"/>
+</svg>
