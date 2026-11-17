@@ -290,15 +290,15 @@ code {
 }
 
 .hero-photo { justify-self: center; width: 100%; }
-.hero-photo img,
-.hero-photo .hero-ph {
+.hero-photo .shot {
   width: 100%;
   max-width: 30rem;
   margin-inline: auto;
 }
-
-.hero-photo figure { margin: 0; }
-.hero-ph .ph-photo { aspect-ratio: 4 / 3; }
+.hero-photo img {
+  aspect-ratio: 3 / 2;
+  object-position: 50% 55%;
+}
 
 /* Services band */
 .service-band {
@@ -343,13 +343,15 @@ code {
 .visit-copy .hero-actions { justify-content: center; }
 
 .visit-photo { justify-self: center; width: 100%; }
-.visit-photo img,
-.visit-photo figure {
+.visit-photo .shot {
   width: 100%;
-  max-width: 22rem;
+  max-width: 28rem;
   margin-inline: auto;
 }
-.visit-photo figure { margin: 0; }
+.visit-photo img {
+  aspect-ratio: 4 / 3;
+  object-position: 50% 55%;
+}
 
 .map-wrap {
   border: 1px solid var(--line);
@@ -422,20 +424,46 @@ code {
   text-align: left;
 }
 
-.photo-grid figure,
-.hero-photo figure,
-.visit-photo figure {
+.shot {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
   background: var(--navy-deep);
 }
 
-.photo-grid img,
-.ph-photo {
+.shot img {
+  display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: auto;
   object-fit: cover;
 }
 
+.photo-grid img {
+  aspect-ratio: 4 / 3;
+}
+
+.sample-tag {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 1;
+  margin: 0;
+  padding: 0.22rem 0.45rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(15, 34, 54, 0.62);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/* Unused now that slots are filled; kept in case a later swap needs a blank tile. */
 .ph-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
   display: grid;
   place-items: center;
   background:
@@ -452,19 +480,6 @@ code {
   text-transform: uppercase;
   font-weight: 700;
   border: 2px dashed rgba(255,255,255,0.22);
-}
-
-.photo-grid figcaption,
-.hero-photo figcaption,
-.visit-photo figcaption {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 0.7rem 0.65rem;
-  color: #eee;
-  font-size: 0.85rem;
-  font-weight: 600;
 }
 
 /* Contact / hours */
@@ -566,19 +581,22 @@ code {
 .call-bar-btn { width: 100%; min-height: 3.15rem; }
 
 @media (max-width: 859px) {
-  .hero { padding: 1.5rem 0 1.35rem; }
+  .hero { padding: 1.5rem 0 calc(1.15rem + 4.75rem); }
   .hero-photo { width: 100%; }
-  .hero-photo img,
-  .hero-photo .hero-ph {
+  .hero-photo .shot {
     width: 100%;
     max-width: none;
   }
-  .hero-photo .ph-photo {
-    height: 11.5rem;
-    aspect-ratio: auto;
+  .hero-photo img {
+    aspect-ratio: 16 / 9;
   }
-  /* Caption would sit under the fixed Call Now bar; the placeholder already labels the slot. */
-  .hero-photo .hero-ph figcaption { display: none; }
+  .visit-photo .shot { max-width: none; }
+  .sample-tag {
+    top: 0.4rem;
+    left: 0.4rem;
+    font-size: 0.62rem;
+    padding: 0.18rem 0.38rem;
+  }
   .hero-tagline { margin-bottom: 0.55rem; }
   .hero-meta { margin-bottom: 1rem; }
   .hero-meta .dot { display: none; }
@@ -593,6 +611,7 @@ code {
   .wordmark-name { font-size: 1.55rem; }
   .brand-logo { height: 4.6rem; max-width: 13.5rem; }
   .photo-grid { grid-template-columns: repeat(3, 1fr); }
+  .photo-grid img { aspect-ratio: 1 / 1; }
   .feature-row { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
   .band-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -603,8 +622,7 @@ code {
     border-left: 1px solid rgba(255,255,255,0.35);
   }
   .band-grid article:first-child { border-left: 0; }
-  .hero-photo img,
-  .hero-photo .hero-ph { max-width: 28rem; }
+  .hero-photo .shot { max-width: 28rem; }
 }
 
 @media (min-width: 860px) {
@@ -620,8 +638,7 @@ code {
     gap: 3rem;
     align-items: center;
   }
-  .hero-photo img,
-  .hero-photo .hero-ph { max-width: 26rem; }
+  .hero-photo .shot { max-width: 26rem; }
 
   .visit-split {
     grid-template-columns: 1fr 1fr;
