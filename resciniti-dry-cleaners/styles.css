@@ -54,28 +54,19 @@ nav a:hover{color:var(--brick)}
 section{padding:clamp(56px,9vw,96px) 0}
 .hero{padding:0}
 
-/* story */
-.story{background:var(--cream)}
-.story-grid{display:grid;gap:36px}
-@media (min-width:820px){.story-grid{grid-template-columns:280px 1fr;align-items:start}}
-.story-mark{text-align:center}
-.story-mark img{width:180px;margin:0 auto;filter:drop-shadow(0 8px 18px rgba(0,0,0,.18))}
-.since{font-family:var(--serif);font-size:1.3rem;margin:.6em 0 0;color:var(--muted)}
-.since span{display:block;font-size:3.2rem;color:var(--brick);line-height:1}
-.story p{max-width:62ch}
-.timeline{list-style:none;margin:28px 0 0;padding:0;border-left:3px solid var(--gold)}
-.timeline li{position:relative;padding:0 0 16px 20px}
-.timeline li::before{content:"";position:absolute;left:-8px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--paper);border:3px solid var(--brick)}
-.timeline .yr{display:block;font-family:var(--serif);font-weight:700;color:var(--brick);font-size:1.1rem}
+/* heritage */
+.heritage{background:var(--cream);padding:28px 0;border-bottom:1px solid var(--line)}
+.heritage-in{display:flex;align-items:center;gap:18px;justify-content:center}
+.heritage img{width:72px;flex:none}
+.heritage p{margin:0;font-family:var(--serif);font-size:clamp(1.1rem,3.4vw,1.45rem)}
+.heritage strong{color:var(--brick)}
 
 /* cards */
 .cards{display:grid;gap:16px;margin-top:20px}
-@media (min-width:700px){.cards.two{grid-template-columns:1fr 1fr}.cards.three{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:700px){.cards.two{grid-template-columns:1fr 1fr}}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
 .card p{margin:0;color:var(--muted)}
 .card.primary{border-top:4px solid var(--brick)}
-.community{background:var(--paper)}
-.placeholder-note{margin-top:18px;font-size:.88rem;color:var(--muted);border:1px dashed #c9b99f;border-radius:10px;padding:10px 14px;background:#fffaf0}
 
 /* services */
 .services{background:var(--cream)}
