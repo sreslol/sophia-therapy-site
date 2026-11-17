@@ -106,3 +106,5 @@ address{font-style:normal;font-size:1.1rem;line-height:1.7;margin-bottom:16px}
 .footer p{margin:.3em 0}
 .credit{margin-top:18px!important;font-size:.75rem;color:#8c847a;opacity:.8}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+.fb{display:inline-flex;align-items:center;gap:6px;vertical-align:middle}
+.fb svg{flex:none}
