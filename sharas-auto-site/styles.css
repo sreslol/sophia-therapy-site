@@ -128,7 +128,15 @@ p { margin: 0 0 1rem; }
     linear-gradient(135deg, rgba(12,44,70,0.97), rgba(29,95,147,0.93)),
     repeating-linear-gradient(0deg, #fff 0 2px, transparent 2px 22px);
   color: var(--white); padding: 2.25rem 0 2.5rem;
+  position: relative;
 }
+.hero {
+  background:
+    linear-gradient(135deg, rgba(12,44,70,0.95), rgba(29,95,147,0.88)),
+    url("images/sample-hero-garage.jpg") center / cover no-repeat,
+    var(--blue-deep);
+}
+.hero-book { font-weight: 700; color: var(--white); margin-bottom: 0.6rem; }
 .hero-split { display: grid; gap: 1.75rem; }
 .eyebrow {
   margin: 0 0 0.6rem; color: var(--yellow); font-weight: 800;
@@ -212,7 +220,17 @@ figcaption { margin-top: 0.5rem; font-size: 0.92rem; color: var(--gray); }
 }
 .cta-phone:hover { color: #ffd95c; }
 .cta-sub { margin: 0.75rem 0 0; }
-.placeholder-link { color: #cfe0ee; }
+.cta-sub { color: #b9cde0; font-size: 0.95rem; }
+
+/* Muted tag on stock sample photos (swap for the shop's own) */
+.sample-tag {
+  position: absolute; top: 0.5rem; right: 0.5rem; z-index: 2;
+  background: rgba(0,0,0,0.55); color: rgba(255,255,255,0.85);
+  font-size: 0.66rem; font-weight: 600; letter-spacing: 0.04em;
+  padding: 0.15rem 0.45rem; border-radius: 3px; pointer-events: none;
+}
+.photo-grid figure.sample { position: relative; }
+.hero-sample-tag { top: auto; bottom: 0.5rem; right: 0.75rem; }
 
 /* Footer */
 .site-footer { background: #0a1a29; color: #b7c4d1; padding: 2.5rem 0 1.5rem; font-size: 0.95rem; }
