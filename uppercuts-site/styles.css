@@ -143,6 +143,8 @@ a{color:var(--red)}
 .barber h3{margin:0;font-family:var(--cond);font-size:24px;font-weight:700;letter-spacing:.03em}
 .barber p{margin:2px 0 0;color:#c9d2e4;font-size:15px}
 .monogram{flex:0 0 62px;height:62px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-size:24px;background:#fff;color:var(--navy);box-shadow:0 0 0 3px var(--navy),0 0 0 6px var(--red)}
+.barber-photo{flex:0 0 62px;width:62px;height:62px;border-radius:50%;object-fit:cover;background:#fff;box-shadow:0 0 0 3px var(--navy),0 0 0 6px var(--red)}
+.barber-lead .barber-photo{box-shadow:0 0 0 3px var(--navy),0 0 0 6px #fff}
 .barber-lead{border-color:var(--red);background:rgba(210,38,48,.15)}
 .barber-lead .monogram{background:var(--red);color:#fff;box-shadow:0 0 0 3px var(--navy),0 0 0 6px #fff}
 .barber-note{text-align:center;color:#aeb9d1;font-size:14px;margin:26px 0 0}
@@ -240,6 +242,7 @@ a{color:var(--red)}
   .barber-grid{grid-template-columns:repeat(4,1fr)}
   .barber{flex-direction:column;text-align:center;padding:26px 16px}
   .monogram{flex-basis:auto;width:84px;height:84px;font-size:30px}
+  .barber-photo{flex-basis:auto;width:110px;height:110px}
   .gallery{grid-template-columns:repeat(4,1fr);gap:14px}
   .hours-grid{grid-template-columns:1fr 1fr;gap:34px}
   .shop-grid{grid-template-columns:1.1fr .9fr;gap:64px}
