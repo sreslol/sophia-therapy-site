@@ -125,7 +125,7 @@ p { margin: 0 0 1rem; }
 .nav a:focus-visible,
 .brand:focus-visible,
 .contact-phone:focus-visible,
-.placeholder-link:focus-visible {
+.contact-link:focus-visible {
   outline: 3px solid var(--ph-bg);
   outline-offset: 3px;
 }
@@ -433,6 +433,8 @@ p { margin: 0 0 1rem; }
   margin-bottom: 0.45rem;
 }
 
+.contact-bar h2 + p + h2 { margin-top: 1rem; }
+
 .contact-bar p { margin: 0 0 0.4rem; }
 
 .contact-phone {
@@ -447,8 +449,13 @@ p { margin: 0 0 1rem; }
 }
 .contact-phone:hover { color: #fff; text-decoration: underline; }
 
-.placeholder-link { color: var(--white); font-weight: 700; }
-.placeholder-link:hover { color: #fff; }
+.contact-link {
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.contact-link:hover { color: #fff; text-decoration: underline; }
 
 .hours-status { font-size: 0.9rem; color: #f3f3f3; }
 .hours-status .ph { margin-right: 0.3rem; }
